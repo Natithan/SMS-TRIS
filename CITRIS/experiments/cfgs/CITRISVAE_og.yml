@@ -1,0 +1,20 @@
+# See https://proceedings.mlr.press/v162/lippe22a/lippe22a.pdf#page=35
+data_dir: /cw/liir_data/NoCsBack/TRIS/causal3d_time_dep_all7_conthue_01_coarse/
+
+
+causal_encoder_checkpoint: /cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/CausalEncoder/p2_citris/1gjsknnr/checkpoints/epoch=199-step=390599.ckpt
+
+batch_size: 512
+max_epochs: 600
+
+beta_classifier: 2
+beta_t1: 1
+lambda_reg: 0.01
+num_latents: 32
+
+model: CITRISVAE
+autoregressive_prior: True
+coarse_vars: True
+
+enco_postprocessing: False
+lambda_sparse: 0.05

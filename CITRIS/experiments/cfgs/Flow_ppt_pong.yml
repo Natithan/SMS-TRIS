@@ -1,0 +1,4 @@
+causal_encoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/2ht3tf3c_CausalEncoder/epoch=199-step=390600.ckpt"
+data_dir: /cw/liir_code/NoCsBack/nathan/p2/CITRIS/data_generation/id_pong/250000_train_points/
+num_latents: 16
+num_flows: 4

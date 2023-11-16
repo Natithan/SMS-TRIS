@@ -1,0 +1,9 @@
+data_dir: /cw/liir_code/NoCsBack/nathan/p2/CITRIS/data_generation/id_pong/250000_train_points/
+causal_encoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/3tfp4bap_CausalEncoder/epoch=199-step=390600.ckpt"
+
+batch_size: 1024
+max_epochs: 1000
+
+coarse_vars: True
+
+enco_postprocessing: False

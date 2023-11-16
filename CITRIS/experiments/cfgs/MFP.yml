@@ -1,0 +1,9 @@
+data_dir: /cw/liir_data/NoCsBack/TRIS/causal3d_time_dep_all7_conthue_01_coarse/
+causal_encoder_checkpoint: /cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/CausalEncoder/p2_citris/1gjsknnr/checkpoints/epoch=199-step=390599.ckpt
+
+batch_size: 1024
+max_epochs: 1000
+
+coarse_vars: True
+
+enco_postprocessing: False

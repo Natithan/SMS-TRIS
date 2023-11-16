@@ -1,0 +1,9 @@
+# See https://proceedings.mlr.press/v162/lippe22a/lippe22a.pdf#page=35
+data_dir: /cw/liir_code/NoCsBack/nathan/p2/CITRIS/data_generation/id_pong/100000_train_points_paper_settings/
+
+batch_size: 512
+max_epochs: 1000
+
+num_latents: 16
+noise_level: .05
+lr: 1e-3

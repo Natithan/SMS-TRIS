@@ -1,0 +1,25 @@
+# See https://proceedings.mlr.press/v162/lippe22a/lippe22a.pdf#page=35
+data_dir: /cw/liir_data/NoCsBack/TRIS/complexpong_time_dep_015_32width_singleint/
+#data_dir: /cw/liir_code/NoCsBack/nathan/p2/CITRIS/data_generation/id_pong/250000_train_points/
+
+#causal_encoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/2ht3tf3c_CausalEncoder/epoch=199-step=390600.ckpt" # Trained using og code, to exclude refactoring bugs
+causal_encoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/og_CITRIS/experiments/checkpoints/CausalEncoder/CausalEncoder_pong_dataNoCsBackTRIScomplexpong_time_dep_015_32width_singleint_64width_64hid/version_3/checkpoints/epoch=189-step=371070.ckpt" # Trained using og code, to exclude refactoring bugs
+#autoencoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/1gd1l289_Autoencoder/epoch=979-step=478240.ckpt"
+autoencoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/og_CITRIS/experiments/checkpoints/Autoencoder/AE_16l_64hid/version_1/checkpoints/epoch=999-step=488000.ckpt" # Trained using og code, to exclude refactoring bugs
+batch_size: 1024
+max_epochs: 1000
+
+beta_classifier: 2
+beta_t1: 1
+lambda_reg: 0.1
+lambda_sparse: 0.05
+num_latents: 16
+num_flows: 4
+
+model: CITRISNF
+autoregressive_prior: True
+coarse_vars: False
+
+enco_postprocessing: False
+
+# python train_nf.py --data_dir /cw/liir_data/NoCsBack/TRIS/complexpong_time_dep_015_32width_singleint/ --causal_encoder_checkpoint "/cw/liir_code/NoCsBack/nathan/p2/og_CITRIS/experiments/checkpoints/CausalEncoder/CausalEncoder_pong_dataNoCsBackTRIScomplexpong_time_dep_015_32width_singleint_64width_64hid/version_7/checkpoints/epoch=199-step=390600.ckpt"  --autoencoder_checkpoint "/cw/liir_code/NoCsBack/nathan/p2/og_CITRIS/experiments/checkpoints/Autoencoder/AE_16l_64hid/version_5/checkpoints/epoch=959-step=468480.ckpt" --batch_size 1024 --max_epochs 1000 --beta_classifier 2 --beta_t1 1 --lambda_reg 0.1 --lambda_sparse 0.05 --num_latents 16 --num_flows 4 --model CITRISNF --autoregressive_prior True --coarse_vars False --enco_postprocessing False

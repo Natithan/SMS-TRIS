@@ -1,0 +1,25 @@
+# See https://proceedings.mlr.press/v162/lippe22a/lippe22a.pdf#page=35
+#data_dir: /cw/liir_data/NoCsBack/TRIS/complexpong_time_dep_015_32width_singleint/
+data_dir: /cw/liir_code/NoCsBack/nathan/p2/CITRIS/data_generation/id_pong/250000_train_points/
+
+#causal_encoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/3tfp4bap_CausalEncoder/epoch=199-step=390600.ckpt"
+#autoencoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/1r5t3ogm_Autoencoder_pong/epoch=959-step=468480.ckpt"
+# Changed from 3tfp4bap and 1r5t3ogm (which are trained on /cw/liir_data/NoCsBack/TRIS/complexpong_time_dep_015_32width_singleint/)to 2ht3tf3c and 1gd1l289 (/cw/liir_code/NoCsBack/nathan/p2/CITRIS/data_generation/id_pong/250000_train_points/) from 7/7/2023 onwards
+causal_encoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/2ht3tf3c_CausalEncoder/epoch=199-step=390600.ckpt"
+#autoencoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/1gd1l289_Autoencoder/epoch=979-step=478240.ckpt"
+
+batch_size: 1024
+max_epochs: 1000
+
+beta_classifier: 2
+beta_t1: 1
+lambda_reg: 0.1
+lambda_sparse: 0.05
+num_latents: 16
+num_flows: 4
+
+model: CITRISNF
+autoregressive_prior: True
+coarse_vars: False
+
+enco_postprocessing: False

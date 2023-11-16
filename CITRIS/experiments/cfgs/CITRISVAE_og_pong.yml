@@ -1,0 +1,19 @@
+# See https://proceedings.mlr.press/v162/lippe22a/lippe22a.pdf#page=35
+data_dir: /cw/liir_code/NoCsBack/nathan/p2/CITRIS/data_generation/id_pong/250000_train_points/
+
+causal_encoder_checkpoint: "/cw/liir_code/NoCsBack/nathan/p2/CITRIS/experiments/checkpoints/2ht3tf3c_CausalEncoder/epoch=199-step=390600.ckpt"
+
+batch_size: 512
+max_epochs: 600
+
+beta_classifier: 2
+beta_t1: 1
+lambda_reg: 0.01
+num_latents: 16
+
+model: CITRISVAE
+autoregressive_prior: True
+coarse_vars: True
+
+enco_postprocessing: False
+lambda_sparse: 0.05
